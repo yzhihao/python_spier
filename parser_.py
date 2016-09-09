@@ -43,11 +43,10 @@ class parse1(object):
         except:
             res_date['attention']='NULL'
 
-        try:
-            answer_num=soup.find('a',href=re.compile(r'^/people/.+/answers$')).find('span')
-            res_date['answer_num']=answer_num.get_text()
-        except:
-            res_date['answer_num']='NULL'
+        # 这里为了抛出错误，当ip限制时抛出
+        answer_num=soup.find('a',href=re.compile(r'^/people/.+/answers$')).find('span')
+        res_date['answer_num']=answer_num.get_text()
+
 
         try:
             question_num=soup.find('a',href=re.compile(r'^/people/.+/asks$')).find('span')
@@ -65,7 +64,7 @@ class parse1(object):
             collections=soup.find('a',href=re.compile(r'^/people/.+/collections$')).find('span')
             res_date['collections']=collections.get_text()
         except:
-            res_date['collections']='NULL'
+         res_date['collections']='NULL'
 
         try:
             location=soup.find('span',class_="location item")

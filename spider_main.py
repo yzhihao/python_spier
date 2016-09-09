@@ -7,6 +7,7 @@ import question_output
 import parser_
 import download
 import question_parser
+import time
 
 class  spidermain():
     def __init__(self):
@@ -22,17 +23,21 @@ class  spidermain():
         errorcount=1
         while self.o_urls.isquestionempty():
             try:
-                errorcount=1
                 new_uel=self.o_urls.get_newquestion_url(count)
                 print(u'这是第%d个问题网页，地址是:%s'%(count,new_uel))
                 print(u'问题集合中还剩%d个url'%(self.o_urls.getquestionurlnum()))
                 html_cont=self.o_download.download(new_uel)
+                print('download is ok')
+                time.sleep(2)
                 new_uels,new_date=self.question_parser.parser(new_uel,html_cont)
+                print('parser is ok')
                 self.o_urls.addpeople_urls(new_uels)
                 self.question_output.collect(new_date)
+                print('question_output is ok')
                 count=count+1
                 if count==count_+10000:
                     break
+                errorcount=1
             except:
                 errorcount+=1
                 count=count+1
@@ -42,8 +47,8 @@ class  spidermain():
         return count
 
     def spiderpeoplemain(self,fristurl):
-        count=14241
-        question_count=6898
+        count=40650
+        question_count=18576
         errorcount=1
         # self.o_urls.addpeople_url(fristurl)
         # self.o_urls.addquestion_url('https://www.zhihu.com/question/50136311')
@@ -51,17 +56,20 @@ class  spidermain():
             count_=count
             while self.o_urls.ispeopleempty():
                 try:
-                    errorcount=1
                     new_uel=self.o_urls.get_newpeople_url(count)
                     print(u'这是第%d个用户网页，地址是:%s'%(count,new_uel))
                     print(u'用户集合中还剩%d个url'%(self.o_urls.getpeopleurlnum()))
                     html_cont=self.o_download.download(new_uel)
+                    print('download is ok')
                     new_uels,new_date=self.parser.parser(new_uel,html_cont)
+                    print('parser is ok')
                     self.o_urls.addquestion_urls(new_uels)
                     self.output.collect(new_date)
+                    print('output is ok')
                     count=count+1
                     if count==count_+10000:
                         break
+                    errorcount=1
                 except:
                     errorcount+=1
                     count=count+1
