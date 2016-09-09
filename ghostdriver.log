@@ -1,0 +1,21 @@
+[INFO  - 2016-09-09T09:19:47.337Z] GhostDriver - Main - running on port 62209
+[INFO  - 2016-09-09T09:19:49.373Z] Session [8ead21d0-766e-11e6-a6cb-995f5a498ebe] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-09-09T09:19:49.374Z] Session [8ead21d0-766e-11e6-a6cb-995f5a498ebe] - page.customHeaders:  - {}
+[INFO  - 2016-09-09T09:19:49.374Z] Session [8ead21d0-766e-11e6-a6cb-995f5a498ebe] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-09-09T09:19:49.374Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8ead21d0-766e-11e6-a6cb-995f5a498ebe
+[ERROR - 2016-09-09T09:19:53.799Z] Session [8ead21d0-766e-11e6-a6cb-995f5a498ebe] - page.onError - msg: TypeError: null is not an object (evaluating '/^(http:\/\/|https:\/\/)+?([^\/]*)/.exec(A.document.referrer)[2]')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2016-09-09T09:19:53.800Z] Session [8ead21d0-766e-11e6-a6cb-995f5a498ebe] - page.onError - stack:
+  t (http://images.sohu.com/cs/jsfile/js/c.js:1)
+  f (http://images.sohu.com/cs/jsfile/js/c.js:1)
+  (anonymous function) (http://images.sohu.com/cs/jsfile/js/c.js:1)
+
+  phantomjs://platform/console++.js:263[INFO  - 2016-09-09T09:20:04.518Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+not an object (evaluating 'hrefValue.indexOf')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2016-09-09T09:19:54.328Z] Session [8ead21d0-766e-11e6-a6cb-995f5a498ebe] - page.onError - stack:
+  global code (http://games.ifeng.com/1403m/paper.shtml:90)
+
+  phantomjs://platform/console++.js:263 in error
