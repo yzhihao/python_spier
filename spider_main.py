@@ -47,8 +47,8 @@ class  spidermain():
         return count
 
     def spiderpeoplemain(self,fristurl):
-        count=40650
-        question_count=18576
+        count=119486
+        question_count=56441
         errorcount=1
         # self.o_urls.addpeople_url(fristurl)
         # self.o_urls.addquestion_url('https://www.zhihu.com/question/50136311')
@@ -61,6 +61,7 @@ class  spidermain():
                     print(u'用户集合中还剩%d个url'%(self.o_urls.getpeopleurlnum()))
                     html_cont=self.o_download.download(new_uel)
                     print('download is ok')
+                    # time.sleep(1)
                     new_uels,new_date=self.parser.parser(new_uel,html_cont)
                     print('parser is ok')
                     self.o_urls.addquestion_urls(new_uels)
